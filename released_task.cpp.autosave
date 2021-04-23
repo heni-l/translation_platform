@@ -1,0 +1,22 @@
+#include "task.h"
+
+Task::Released_Task(QString name,int state)
+{
+    m_qsNameOfPreason = name;
+    m_iState = state;
+}
+
+Released_Task::Released_Task(const Released_Task& task)
+{
+    m_qsNameOfPreason = task.m_qsNameOfPreason;
+    m_iState = task.m_iState;
+}
+
+Released_Task::~Released_Task(){}
+
+Released_Task& Released_Task::operator=(const Released_Task& task)
+{
+    m_qsNameOfPreason = task.m_qsNameOfPreason;
+    m_iState = task.m_iState;
+    return *this;
+}

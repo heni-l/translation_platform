@@ -1,0 +1,24 @@
+#ifndef RELEASED_TASK_H
+#define RELEASED_TASK_H
+
+#include <QString>
+
+class Released_Task
+{
+public :
+    Released_Task(QString name,int state);
+    Released_Task(const Released_Task& task);
+    virtual ~Released_Task();
+    Released_Task& operator=(const Released_Task& task);
+private :
+    QString m_qsNameOfReleasedPreason;//任务的发布者
+    QString m_qsBriefIntroduction;//任务的简介
+    QString m_qsContent;//任务的内容
+    int m_iDeadlineOfTask;//任务的截止时间
+    int m_iDeadlineOfRecruitmentPersonInCharge;//招聘负责人的截止时间
+    int m_iTotalPay;//任务的总金额
+    int m_iState;//m_iState为1表示正在进行，为0表示已完成
+    
+};
+
+#endif // RELEASED_TASK_H
